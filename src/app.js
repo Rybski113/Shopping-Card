@@ -27,26 +27,31 @@ let shopItemsData = [{
     price: 300,
     desc: "Lorem ipsum dolor sit amet ...",
     img: "img/4.jpg"
-   }]
+   }];
 
 let generateShop = ()=> {
-    return shop.innerHTML =  `
-    <div class="item">
-            <img width="220" src="img/1.jpg" alt="shirts">
-            <div class="details">
-                <h3>Casual Shirt</h3>
-                <p>lorem ipsum dolor, Dolor sit</p>
-                <div class="price-quantity">
-                    <h2>$ 45</h2>
-                    <div class="buttons">
-                        <i class="bi bi-dash-lg"></i>
-                        <div class="quantity">0</div>
-                        <i class="bi bi-plus-lg"></i> 
+    return (shop.innerHTML = shopItemsData.map((x)=>{
+
+        let {id,name,price,desc,img } = x;
+
+        return  `
+        <div id=product-id-${id} class="item">
+                <img width="220" height="250" src=${img} alt="">
+                <div class="details">
+                    <h3>${name}</h3>
+                    <p>${desc}</p>
+                    <div class="price-quantity">
+                        <h2>${price}</h2>
+                        <div class="buttons">
+                            <i class="bi bi-dash-lg"></i>
+                            <div id=${id} class="quantity">0</div>
+                            <i class="bi bi-plus-lg"></i> 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `
-}
+        `
+    }).join(""));
+};
 
 generateShop()
