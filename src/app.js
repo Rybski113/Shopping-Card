@@ -43,9 +43,9 @@ let generateShop = ()=> {
                     <div class="price-quantity">
                         <h2>${price}</h2>
                         <div class="buttons">
-                            <i class="bi bi-dash-lg"></i>
+                            <i onclick="decrement()" class="bi bi-dash-lg"></i>
                             <div id=${id} class="quantity">0</div>
-                            <i class="bi bi-plus-lg"></i> 
+                            <i onclick="increment()" class="bi bi-plus-lg"></i> 
                         </div>
                     </div>
                 </div>
@@ -55,3 +55,11 @@ let generateShop = ()=> {
 };
 
 generateShop()
+
+let increment = ()=>{
+    console.log("increment")
+};
+let decrement = ()=>{
+    console.log("decrement")
+};
+let update = ()=>{};
