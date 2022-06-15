@@ -96,5 +96,5 @@ let update = (id) => {
 };
 
 let calculation = () =>{
-    console.log(basket.map((x)=>x.item ));
-}
+    console.log(basket.map((x)=>x.item).reduce((x,y)=>))
+};
