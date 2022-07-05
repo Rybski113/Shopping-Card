@@ -90,11 +90,12 @@ let decrement = (id)=>{
     }
 
     localStorage.setItem("data", JSON.stringify(basket));
+    update(selectedItem.id);
     basket = basket.filter((x) =>x.item !== 0);
 
     
     //console.log(basket)
-    update(selectedItem.id);
+    
 };
 let update = (id) => {
     let search = basket.find((x) => x.id === id );
