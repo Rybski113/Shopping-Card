@@ -74,6 +74,7 @@ let increment = (id)=>{
     }
 
     localStorage.setItem("data", JSON.stringify(basket));
+    basket = basket.filter((x)=>x.item !==0);
     
     //console.log(basket)
     update(selectedItem.id);
