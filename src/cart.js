@@ -1,3 +1,5 @@
+let label = document.getElementById('label')
+let ShoopingCart = document.getElementById('shooping-cart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 console.log(basket)
