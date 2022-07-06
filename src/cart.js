@@ -11,3 +11,13 @@ let calculation = () =>{
 };
 
 calculation();
+
+let generateCartItems = ()=> {
+    if(basket.length !== 0) {
+        console.log("basket is not empty")
+    } else {
+        console.log("basket is empty")
+    }
+}
+
+generateCartItems()
