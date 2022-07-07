@@ -72,7 +72,7 @@ let decrement = (id)=>{
     basket = basket.filter((x) =>x.item !== 0);
 
     
-    //console.log(basket)
+ 
     
 };
 let update = (id) => {
