@@ -16,13 +16,15 @@ calculation();
 let generateCartItems = ()=> {
     if(basket.length !== 0) {
         return ShoppingCart.innerHTML = basket.map((x)=> {
-
+        console.log(x)
+        let { id, item} = x
+        let search = shopItemsData.find((y)=> y.id ===id) || []
             
 
 
             return `
              <div class="cart-item">
-               <img src="" alt=""/>
+               <img width="100" src= ${search.img} alt=""/>
              </div>
             `
         })
