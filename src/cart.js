@@ -16,10 +16,17 @@ calculation();
 let generateCartItems = ()=> {
     if(basket.length !== 0) {
         return ShoppingCart.innerHTML = basket.map((x)=> {
+
+            
+
+
             return `
-             <div class="cart-item">Hello</div>
+             <div class="cart-item">
+               <img src="" alt=""/>
+             </div>
             `
         })
+        .join("")
     } else {
         ShoppingCart.innerHTML = ``;
         label.innerHTML = `
