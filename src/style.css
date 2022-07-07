@@ -27,7 +27,7 @@ i {
     background-color: #6c757d;
     color: white;
     padding: 25px 60px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .cart {
@@ -41,13 +41,13 @@ i {
 
 .cartAmount {
     position: absolute;
-    top: -10px;
-    right: -5px;
+    top: -15px;
+    right: -10px;
     font-size: 16px;
     background-color: red;
     color: white;
     padding: 3px;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 /**
@@ -113,7 +113,7 @@ i {
 
 .text-center {
     text-align: center;
-    margin: 10px 20px 10px 20px;
+    margin-bottom: 20px;
 }
 
 .HomeBtn {
@@ -125,3 +125,43 @@ i {
     cursor: pointer;
     margin-top:10px ;
 }
+
+.bi-x-lg {
+    color: red;
+    font-weight: normal;
+}
+
+
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+}
+
+.cart-item {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+}
+
+.title-price {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cart-item-price {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 6px;
+  }
