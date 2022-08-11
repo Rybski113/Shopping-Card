@@ -43,4 +43,24 @@ h2 {
 .item {
     border: 2px solid black;
     border-radius: 4px;
+    margin-top: 20px;
+}
+
+.details {
+    margin: 8px;
+}
+
+.price-quantity {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.quantity, i {
+    margin: 5px;
 }
