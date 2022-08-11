@@ -32,3 +32,15 @@ h2 {
     background-color: aqua;
     font-size: 20px;
 }
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.item {
+    border: 2px solid black;
+    border-radius: 4px;
+}
