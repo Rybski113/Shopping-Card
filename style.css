@@ -7,3 +7,28 @@
 body {
     font-family: sans-serif;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: #fff;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.cart {
+   font-size: 30px;
+   position: relative;
+   margin: 20px;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: aqua;
+    font-size: 20px;
+}
