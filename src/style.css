@@ -104,3 +104,44 @@ h2 {
     cursor: pointer;
     margin-top: 10px;
 }
+
+.fa-xmark {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+   
+}
+
+.cart-item {
+    border: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+}
+
+.title-price-x {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-price {
+    background-color: black;
+    color: #fff;
+    border-radius: 4px;
+    padding: 3px 6px;
+}

@@ -22,8 +22,9 @@ let generateCartItems = ()=>{
               <img width="100" src=${search.img} alt=""/>
               <div class="details">
                 <div class="title-price-x">
-                    <h4>
+                    <h4 class="title-price">
                        <p>${search.name}</p>
+                       <p class="cart-item-price">$ ${search.price}</p>
                     </h4>
                     <i class="fa-solid fa-xmark"></i>
                 </div>
