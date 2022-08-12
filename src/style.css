@@ -95,7 +95,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.homeBtn {
+.homeBtn, .checkout, .removeAll {
     background-color: black;
     color: #fff;
     border: none;
@@ -103,6 +103,7 @@ h2 {
     border-radius: 3px;
     cursor: pointer;
     margin-top: 10px;
+    margin: 5px;
 }
 
 .fa-xmark {

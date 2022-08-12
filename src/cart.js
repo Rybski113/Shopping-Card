@@ -100,6 +100,7 @@ let increment = (id)=> {
     //console.log(search.item)
     document.getElementById(id).innerHTML = search.item
     calculation()
+    totalAmount()
 }
 
 
@@ -109,4 +110,25 @@ let removeItem = (id)=>{
       basket = basket.filter((x)=> x.id !== selectedItem.id)
       localStorage.setItem("data", JSON.stringify(basket));
       generateCartItems()
+      totalAmount()
 }
+
+let totalAmount = ()=> {
+    if(basket.length !== 0){
+        let amount = basket.map((x)=>{
+            let {item, id} = x
+            let search = shopItemsData.find((y)=> y.id === id) || []
+            return item * search.price
+        }).reduce((x, y)=>x+y, 0)
+        //console.log(amount)
+        label.innerHTML = `
+          <h2>Total Bill : $ ${amount}</h2>
+          <button class="checkout">Checkout</div>
+          <button class="removeAll">Remove All</div>
+        `
+       
+    }
+    else return
+}
+
+totalAmount()
