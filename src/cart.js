@@ -26,7 +26,7 @@ let generateCartItems = ()=>{
                        <p>${search.name}</p>
                        <p class="cart-item-price">$ ${search.price}</p>
                     </h4>
-                    <i class="fa-solid fa-xmark"></i>
+                    <i onclick="removeItem(${id})" class="fa-solid fa-xmark"></i>
                 </div>
                   <div class="buttons">
                         <i onclick= "decrement(${id})" class="fa-solid fa-minus"></i>
@@ -72,9 +72,8 @@ let increment = (id)=> {
      search .item +=1;
     }
     
-    //console.log(basket)
-    update(selectedItem.id)
     generateCartItems()
+    update(selectedItem.id)
     localStorage.setItem("data", JSON.stringify(basket));
  }
  
@@ -101,4 +100,13 @@ let increment = (id)=> {
     //console.log(search.item)
     document.getElementById(id).innerHTML = search.item
     calculation()
+}
+
+
+let removeItem = (id)=>{
+      let selectedItem = id
+      //console.log(selectedItem)
+      basket = basket.filter((x)=> x.id !== selectedItem.id)
+      localStorage.setItem("data", JSON.stringify(basket));
+      generateCartItems()
 }
