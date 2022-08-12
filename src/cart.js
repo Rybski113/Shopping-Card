@@ -28,8 +28,18 @@ let generateCartItems = ()=>{
                     </h4>
                     <i class="fa-solid fa-xmark"></i>
                 </div>
+                  <div class="buttons">
+                        <i onclick= "decrement(${id})" class="fa-solid fa-minus"></i>
+                        <div id=${id} class="quantity">${item} </div>
+                        <i onclick= "increment(${id})" class="fa-solid fa-plus"></i>
+                   </div>
+                   <h3>${item * search.price}</h3>
               </div>
+
+
+                 
              </div>
+             
             `
         }).join(""))
     } else {
@@ -45,3 +55,50 @@ let generateCartItems = ()=>{
 }
 
 generateCartItems()
+
+let increment = (id)=> {
+    let selectedItem = id 
+    let search = basket.find((x)=> x.id === selectedItem.id)
+ 
+  
+    if(search === undefined) {
+     basket.push(
+         {
+         id: selectedItem.id,
+         item: 1,
+        })
+    }
+    else {
+     search .item +=1;
+    }
+    
+    //console.log(basket)
+    update(selectedItem.id)
+    generateCartItems()
+    localStorage.setItem("data", JSON.stringify(basket));
+ }
+ 
+ let decrement = (id)=> {
+     let selectedItem = id 
+    let search = basket.find((x)=> x.id === selectedItem.id)
+ 
+    if(search === undefined) return
+  
+    else if(search.item === 0) return
+    else {
+     search .item -=1;
+    }
+   
+   
+    update(selectedItem.id)
+    basket = basket.filter((x)=>x.item !== 0)
+    generateCartItems()
+    localStorage.setItem("data", JSON.stringify(basket));
+ }
+
+ let update = (id)=> {
+    let search = basket.find((x)=> x.id === id)
+    //console.log(search.item)
+    document.getElementById(id).innerHTML = search.item
+    calculation()
+}
