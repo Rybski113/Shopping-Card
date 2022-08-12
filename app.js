@@ -83,6 +83,7 @@ let decrement = (id)=> {
     let selectedItem = id 
    let search = basket.find((x)=> x.id === selectedItem.id)
 
+   if(search === undefined) return
  
    if(search.item === 0) return
    else {

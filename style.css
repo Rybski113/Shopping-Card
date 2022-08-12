@@ -15,6 +15,12 @@ body {
     color: #fff;
 }
 
+i {
+    cursor: pointer;
+    color: black;
+
+}
+
 h2 {
     margin: 10px;
 }
@@ -23,6 +29,8 @@ h2 {
    font-size: 30px;
    position: relative;
    margin: 20px;
+   background-color: #fff;
+   border-radius: 4px;
 }
 
 .cartAmount {
