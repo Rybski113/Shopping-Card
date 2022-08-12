@@ -52,6 +52,7 @@ h2 {
     grid-template-columns: repeat(4, 223px);
     gap: 30px;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 1000px) {
@@ -70,6 +71,11 @@ h2 {
     border: 2px solid black;
     border-radius: 4px;
     margin-top: 20px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 2px 2px 0 0;
 }
 
 .details {
